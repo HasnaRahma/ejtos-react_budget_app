@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { TiDelete } from 'react-icons/ti';
+import {PlusOutlined , DeleteOutlined} from '@ant-design/icons';
+import {Button} from 'antd';
 import { AppContext } from '../context/AppContext';
 
 const ExpenseItem = (props) => {
@@ -29,8 +31,8 @@ const ExpenseItem = (props) => {
         <tr>
         <td>{props.name}</td>
         <td>£{props.cost}</td>
-        <td><button onClick={event=> increaseAllocation(props.name)}>+</button></td>
-        <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
+        <td><Button onClick={event=> increaseAllocation(props.name)} type="primary" shape="circle" icon={<PlusOutlined/>}/></td>
+        <td><Button onClick={handleDeleteExpense} type="primary" danger shape="circle" icon={<DeleteOutlined/>}></Button></td>
         </tr>
     );
 };
