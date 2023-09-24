@@ -9,6 +9,7 @@ import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseItem from './components/ExpenseItem';
 import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
+import Currency from './components/Currency';
 // Import the Provider from Redux context
 import { AppProvider } from './context/AppContext';
 const App = () => {
@@ -27,6 +28,10 @@ const App = () => {
                 
                         <div className='col-sm'>
                             <ExpenseTotal />
+                        </div>    
+
+                        <div className='col-sm'>
+                            <Currency />
                         </div>    
                     </div>
 

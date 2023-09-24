@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.ant-select-selector {
+    background-color: lightgreen!important;
+    border-color: green!important;
+  }
