@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { TiDelete } from 'react-icons/ti';
 import {PlusOutlined , DeleteOutlined} from '@ant-design/icons';
 import {Button} from 'antd';
 import { AppContext } from '../context/AppContext';
