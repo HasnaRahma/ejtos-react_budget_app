@@ -11,4 +11,4 @@ const ExpenseTotal = () => {
         </div>
     );
 };
-export default ExpenseTotal;
+ export default ExpenseTotal;
