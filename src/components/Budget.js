@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Budget = () => {
-    const { budget,expenses } = useContext(AppContext);
+    const { currency,budget,expenses } = useContext(AppContext);
     const [newBudget, setNewBudget] = useState(budget);
     // Calculate the totalExpenses to add the limitation on new budget
     const totalExpenses = expenses.reduce((total, item) => {
@@ -32,8 +32,8 @@ const Budget = () => {
     }
     return (
     <div className='alert alert-secondary'>
-    <span>Budget: £   </span>
-    <input type="number" step="10" value={newBudget} onChange={handleBudgetChange}></input>
+    <span>Budget: {currency.split(' ')[0]}   </span>    
+    <input type="number" step="10" value={newBudget} onChange={handleBudgetChange} style={{width: '200px'}}></input>
     </div>
     );
 };

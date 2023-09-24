@@ -4,7 +4,7 @@ import {Button} from 'antd';
 import { AppContext } from '../context/AppContext';
 
 const ExpenseItem = (props) => {
-    const { dispatch } = useContext(AppContext);
+    const { currency,dispatch } = useContext(AppContext);
 
     const handleDeleteExpense = () => {
         dispatch({
@@ -29,7 +29,7 @@ const ExpenseItem = (props) => {
     return (
         <tr>
         <td>{props.name}</td>
-        <td>£{props.cost}</td>
+        <td>{currency.split(' ')[0]}   {props.cost}</td>
         <td><Button onClick={event=> increaseAllocation(props.name)} type="primary" shape="circle" icon={<PlusOutlined/>}/></td>
         <td><Button onClick={handleDeleteExpense} type="primary" danger shape="circle" icon={<DeleteOutlined/>}></Button></td>
         </tr>

@@ -16,6 +16,7 @@ const Currency = () => {
         },
       };
     const changeCurrency = (val)=>{
+        console.log(val)
             dispatch({
                 type: 'CHG_CURRENCY',
                 payload: val,
@@ -27,7 +28,7 @@ const Currency = () => {
             name="Currency" 
             id="currency-select"                  
             placeholder={`Currency (${currency})`} 
-            onChange={event=>changeCurrency(event.target.value)}
+            onChange={val=>changeCurrency(val)}
             style={greenStyle.select}>
               <option style={greenStyle.option} value="£ Pound">£ Pound</option>
               <option style={greenStyle.option} value="₹ Ruppe">₹ Ruppe</option>

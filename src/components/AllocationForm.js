@@ -2,8 +2,7 @@ import { Button } from 'antd';
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 const AllocationForm = (props) => {
-    const { dispatch,remaining  } = useContext(AppContext);
-
+    const { currency, dispatch,remaining  } = useContext(AppContext);
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('');
@@ -65,7 +64,7 @@ const AllocationForm = (props) => {
                             <option defaultValue value="Add" name="Add">Add</option>
                     <option value="Reduce" name="Reduce">Reduce</option>
                 </select>
-                <h6 style={{marginLeft : '2rem'}}>£</h6>
+                <h6 style={{marginLeft : '2rem'}}>{currency.split(' ')[0]}</h6>
                 <input
                     required='required'
                     type='text'
